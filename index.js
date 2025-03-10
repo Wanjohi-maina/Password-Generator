@@ -7,25 +7,9 @@ const passwordElOne = document.getElementById("password-el-1")
 const passwordElTwo = document.getElementById("password-el-2")
 let passwordLength = 15
 
-// function getRandomPassword () {
-//     let randomPasswordOne = ""
-//     let randomPasswordTwo = ""
-//     for (let i = 0; i < passwordLength; i++) {
-//         let randomCharacterOne = Math.floor(Math.random() * characters.length)
-//         randomPasswordOne += characters[randomCharacterOne]
-//         passwordElOne.textContent = randomPasswordOne
-//     }
-//     for (let i = 0; i < passwordLength; i++) {
-//         let randomCharacterTwo = Math.floor(Math.random() * characters.length)
-//         randomPasswordTwo += characters[randomCharacterTwo]
-//         passwordElTwo.textContent = randomPasswordTwo
-//     }
-// }
-
 function getRandomCharacter () {
     let randomCharacter = Math.floor(Math.random() * characters.length)
-    return characters[randomCharacter]
-   
+    return characters[randomCharacter]   
 }
 
 function getRandomPassword () {
@@ -35,11 +19,9 @@ function getRandomPassword () {
         randomPasswordOne += getRandomCharacter ()
         passwordElOne.textContent = randomPasswordOne 
     }
-
     for (let i = 0; i < passwordLength; i++) {
         randomPasswordTwo += getRandomCharacter ()
         passwordElTwo.textContent = randomPasswordTwo      
-    } 
-  
+    }   
 }
  
