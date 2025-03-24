@@ -5,10 +5,10 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 
 const passwordElOne = document.getElementById("password-el-1")
 const passwordElTwo = document.getElementById("password-el-2")
-let passwordLength = 15
+const passwordLength = 15
 
 function getRandomCharacter () {
-    let randomCharacter = Math.floor(Math.random() * characters.length)
+    const randomCharacter = Math.floor(Math.random() * characters.length)
     return characters[randomCharacter]   
 }
 
@@ -16,12 +16,12 @@ function getRandomPassword () {
     let randomPasswordOne = ""
     let randomPasswordTwo = ""
     for (let i = 0; i < passwordLength; i++) {
-        randomPasswordOne += getRandomCharacter ()
-        passwordElOne.textContent = randomPasswordOne 
+        randomPasswordOne += getRandomCharacter () 
     }
+    passwordElOne.textContent = randomPasswordOne
     for (let i = 0; i < passwordLength; i++) {
-        randomPasswordTwo += getRandomCharacter ()
-        passwordElTwo.textContent = randomPasswordTwo      
-    }   
+        randomPasswordTwo += getRandomCharacter ()     
+    }
+    passwordElTwo.textContent = randomPasswordTwo 
 }
  
